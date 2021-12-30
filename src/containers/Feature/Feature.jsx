@@ -1,5 +1,5 @@
 import React from 'react';
-import Features from '../../components/Features/Features';
+import Features from '../../components/features/Features';
 import './Feature.css';
 
 const featureData = [
@@ -22,14 +22,21 @@ const featureData = [
 ];
 
 const Feature = () => (
-  <div className="gpt3__feature section__padding" id="features">
-    <div className="gpt3__feature-heading">
-      <h1 className="gradient__text">The Future is Now and You Just Need to Realize It. Step into Future Today. & Make it Happen.</h1>
+  <div className='gpt3__feature section__padding' id='features'>
+    <div className='gpt3__feature-heading'>
+      <h1 className='gradient__text'>
+        The Future is Now and You Just Need to Realize It. Step into Future
+        Today. & Make it Happen.
+      </h1>
       <p>Request Early Access to Get Started</p>
     </div>
-    <div className="gpt3__feature-container">
+    <div className='gpt3__feature-container'>
       {featureData.map((item, index) => (
-        <Features Title={item.Title} text={item.text} key={item.Title + index} />
+        <Features
+          Title={item.Title}
+          text={item.text}
+          key={item.Title + index}
+        />
       ))}
     </div>
   </div>
